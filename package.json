@@ -1,20 +1,35 @@
 {
-  "name": "container",
+  "name": "@micro-front-end-demo/container",
   "version": "0.1.0",
-  "private": true,
+  "author": "Keyhan Gholami",
+  "scripts": {
+    "format": "prettier --write",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "history": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest-enzyme": "^7.1.2",
+    "jest-fetch-mock": "^3.0.3",
+    "prettier": "^2.0.5"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "maxLength": 80,
+    "tabWidth": 2
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -16,12 +16,13 @@ const MicroFrontend = ({ name, host, history }) => {
     fetch(`${host}/asset-manifest.json`)
       .then(res => res.json())
       .then(manifest => {
-        const promises = Object.keys(manifest['files'])
+        const files = manifest['files'] || manifest;
+        const promises = Object.keys(files)
           .filter(key => key.endsWith('.js'))
           .reduce((sum, key) => {
             sum.push(
               new Promise(resolve => {
-                const path = `${host}${manifest['files'][key]}`;
+                const path = `${host}${files[key]}`;
                 const script = document.createElement('script');
                 if (key === 'main.js') {
                   script.id = scriptId;

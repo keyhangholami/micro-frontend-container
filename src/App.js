@@ -10,14 +10,14 @@ const CreateReactApp = ({ history }) => (
   <MicroFrontend
     history={history}
     host={createReactAppHost}
-    name="createReactApp"
+    name="ReactMFApp"
   />
 );
 const CreateVueApp = ({ history }) => (
   <MicroFrontend
     history={history}
     host={createVueAppHost}
-    name="createVueApp"
+    name="VueMFApp"
   />
 );
 
@@ -62,12 +62,12 @@ const App = props => {
           <NavLink to="/home">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/createReactApp">
+          <NavLink to="/reactMFApp">
             Micro Frontend: Create React App
           </NavLink>
         </li>
         <li>
-          <NavLink to="/createVueApp">
+          <NavLink to="/vueMFApp">
             Micro Frontend: Create Vue App
           </NavLink>
         </li>
@@ -75,8 +75,8 @@ const App = props => {
 
       <Switch>
         <Route path="/home" component={Home} />
-        <Route path="/createReactApp" render={() => <CreateReactApp />} />
-        <Route path="/createVueApp" render={() => <CreateVueApp />} />
+        <Route path="/reactMFApp" render={() => <CreateReactApp />} />
+        <Route path="/vueMFApp" render={() => <CreateVueApp />} />
       </Switch>
     </BrowserRouter>
   );

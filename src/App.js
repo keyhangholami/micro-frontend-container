@@ -75,8 +75,8 @@ const App = props => {
 
       <Switch>
         <Route path="/home" component={Home} />
-        <Route path="/reactMFApp" render={CreateReactApp} />
-        <Route path="/vueMFApp" render={CreateVueApp} />
+        <Route path="/reactMFApp" component={CreateReactApp} />
+        <Route path="/vueMFApp" component={CreateVueApp} />
       </Switch>
     </BrowserRouter>
   );
